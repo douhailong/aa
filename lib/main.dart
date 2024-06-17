@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:ask/layout.dart';
-import 'package:ask/pages/home/page.dart';
-import 'package:ask/pages/profile/page.dart';
-import 'package:ask/pages/sign_in/page.dart';
+// import 'package:ask/pages/home/page.dart';
+// import 'package:ask/pages/profile/page.dart';
+// import 'package:ask/pages/sign_in/page.dart';
 import 'package:ask/themes/color.dart';
 import 'package:ask/utils/local_notifications.dart';
 import 'package:flutter/material.dart';
@@ -46,8 +46,8 @@ class RootApp extends StatelessWidget {
       ),
       home: RootLayout(
         child: Scaffold(
-          extendBody: true,
-          body: Column(
+          // extendBody: true,
+          body: ListView(
             children: [
               Image.asset('assets/images/8.png'),
               Image.asset('assets/images/8.png'),
@@ -71,26 +71,26 @@ final _router = GoRouter(
   initialLocation: '/sign-in',
   navigatorKey: _rootNavigatorKey,
   routes: [
-    GoRoute(
-      path: '/sign-in',
-      builder: (context, state) => const SignInPage(),
-    ),
-    ShellRoute(
-      navigatorKey: _shellNavigatorKey,
-      builder: (context, state, child) => RootLayout(
-        child: child,
-      ),
-      routes: [
-        GoRoute(
-          path: '/',
-          builder: (context, state) => const ProfilePage(),
-        ),
-        GoRoute(
-          path: '/a',
-          builder: (context, state) => const HomePage(),
-        )
-      ],
-    ),
+    // GoRoute(
+    //   path: '/sign-in',
+    //   builder: (context, state) => const SignInPage(),
+    // ),
+    // ShellRoute(
+    //   navigatorKey: _shellNavigatorKey,
+    //   builder: (context, state, child) => RootLayout(
+    //     child: child,
+    //   ),
+    //   routes: [
+    //     GoRoute(
+    //       path: '/',
+    //       builder: (context, state) => const ProfilePage(),
+    //     ),
+    //     GoRoute(
+    //       path: '/a',
+    //       builder: (context, state) => const HomePage(),
+    //     )
+    //   ],
+    // ),
     // GoRoute(
     //   path: '/:id',
     //   builder: (context, state) => const RootLayout(),

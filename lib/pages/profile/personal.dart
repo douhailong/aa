@@ -21,10 +21,10 @@ class Personal extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            CircleAvatar(
-              radius: 32,
-              backgroundImage: AssetImage('assets/images/avatar.jpeg'),
-            ),
+            // CircleAvatar(
+            //   radius: 32,
+            //   // backgroundImage: AssetImage('assets/images/avatar.jpeg'),
+            // ),
             Text(
               'Account To',
               style: TextStyle(color: Colors2.gray700, fontSize: 24),

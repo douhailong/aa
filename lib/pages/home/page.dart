@@ -13,12 +13,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: [
-          Image.asset('assets/images/a.jpg'),
-          Image.asset('assets/images/b.jpg'),
-          Image.asset('assets/images/c.jpg'),
-          Image.asset('assets/images/b.jpg'),
-        ],
+        children: [],
       ),
     );
   }
