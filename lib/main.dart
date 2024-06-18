@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:ask/layout.dart';
+import 'package:ask/pages/profile/page.dart';
+import 'package:ask/server/request.dart';
 // import 'package:ask/pages/home/page.dart';
 // import 'package:ask/pages/profile/page.dart';
 // import 'package:ask/pages/sign_in/page.dart';
@@ -9,6 +11,7 @@ import 'package:ask/themes/color.dart';
 import 'package:ask/utils/local_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -44,12 +47,25 @@ class RootApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Colors.white,
       ),
+      // home: ProfilePage(),
       home: RootLayout(
         child: Scaffold(
           // extendBody: true,
           body: ListView(
             children: [
               Image.asset('assets/images/8.png'),
+              ElevatedButton(
+                  onPressed: () async {
+                    print('_______111___________________________________');
+
+                    final a = await g();
+                    final t = Map();
+                    t['a'] = 999;
+                    t['b'] = () {};
+                    t['c'] = [1, 2, 3];
+                    print(t);
+                  },
+                  child: const Text('Button')),
               Image.asset('assets/images/8.png'),
               Image.asset('assets/images/8.png'),
               Image.asset('assets/images/8.png')

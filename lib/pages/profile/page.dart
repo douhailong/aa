@@ -34,8 +34,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     Column(
                       children: [
                         SvgPicture.asset(
-                          'assets/images/Collection.svg',
+                          'assets/images/Library.svg',
                           width: 26,
+                          color: Colors.red,
                         ),
                         const Text('Collection')
                       ],

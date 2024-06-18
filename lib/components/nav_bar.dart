@@ -69,7 +69,7 @@ class _NavBarState extends State<NavBar> {
             ),
             Positioned.fill(
               child: BackdropFilter(
-                blendMode: BlendMode.src,
+                blendMode: BlendMode.srcATop,
                 filter: ImageFilter.blur(
                   sigmaX: 19,
                   sigmaY: 19,
@@ -148,7 +148,7 @@ class SubNavBar extends StatelessWidget {
                   (selectedIndex == index
                       ? const Color(0XFFFF001F)
                       : Colors2.gray400),
-                  BlendMode.srcIn),
+                  BlendMode.srcATop),
               child: item.icon,
             ),
           ),
