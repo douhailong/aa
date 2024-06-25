@@ -32,6 +32,7 @@ class _RootLayoutState extends State<RootLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
+      backgroundColor: Colors.red,
       body: widget.child,
       bottomNavigationBar: NavBar(
         items: items,

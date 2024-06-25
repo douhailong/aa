@@ -40,7 +40,6 @@ class RootApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ask',
-      debugShowCheckedModeBanner: true,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors2.gray100,
@@ -49,28 +48,9 @@ class RootApp extends StatelessWidget {
       ),
       // home: ProfilePage(),
       home: RootLayout(
-        child: Scaffold(
-          // extendBody: true,
-          body: ListView(
-            children: [
-              Image.asset('assets/images/8.png'),
-              ElevatedButton(
-                  onPressed: () async {
-                    print('_______111___________________________________');
-
-                    final a = await g();
-                    final t = Map();
-                    t['a'] = 999;
-                    t['b'] = () {};
-                    t['c'] = [1, 2, 3];
-                    print(t);
-                  },
-                  child: const Text('Button')),
-              Image.asset('assets/images/8.png'),
-              Image.asset('assets/images/8.png'),
-              Image.asset('assets/images/8.png')
-            ],
-          ),
+        child: ListView.builder(
+          itemCount: 4,
+          itemBuilder: (context, index) => Image.asset('assets/images/a.jpg'),
         ),
       ),
     );
