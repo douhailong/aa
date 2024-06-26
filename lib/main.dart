@@ -46,11 +46,29 @@ class RootApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Colors.white,
       ),
-      // home: ProfilePage(),
-      home: RootLayout(
+      home: GlobalLayout(
         child: ListView.builder(
           itemCount: 4,
-          itemBuilder: (context, index) => Image.asset('assets/images/a.jpg'),
+          itemBuilder: (context, index) => index == 1
+              ? ElevatedButton(
+                  onPressed: () {
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (
+                          context,
+                        ) =>
+                            ListView.builder(
+                              itemCount: 30,
+                              itemBuilder: (BuildContext context, int index) {
+                                return ListTile(
+                                  title: Text("$index"),
+                                  onTap: () => Navigator.of(context).pop(index),
+                                );
+                              },
+                            ));
+                  },
+                  child: const Text('click'))
+              : Image.asset('assets/images/a.jpg'),
         ),
       ),
     );

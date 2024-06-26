@@ -1,8 +1,8 @@
 import 'dart:ui';
-import 'package:ask/themes/color.dart';
 import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ask/themes/color.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({
@@ -40,7 +40,6 @@ class _NavBarState extends State<NavBar> {
           bottom: insetSize,
         ),
         decoration: BoxDecoration(
-          // color: Colors.white60.withOpacity(.5),
           borderRadius: BorderRadius.circular(24),
           // border: Border.all(
           //   color: Colors.white.withOpacity(.2),
@@ -147,7 +146,7 @@ class SubNavBar extends StatelessWidget {
               colorFilter: ColorFilter.mode(
                   (selectedIndex == index
                       ? const Color(0XFFFF001F)
-                      : Colors2.gray400),
+                      : Colors2.zinc700),
                   BlendMode.srcATop),
               child: item.icon,
             ),

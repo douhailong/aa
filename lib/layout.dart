@@ -2,16 +2,16 @@ import 'package:ask/components/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class RootLayout extends StatefulWidget {
-  const RootLayout({required this.child, super.key});
+class GlobalLayout extends StatefulWidget {
+  const GlobalLayout({required this.child, super.key});
 
   final Widget child;
 
   @override
-  State<RootLayout> createState() => _RootLayoutState();
+  State<GlobalLayout> createState() => _GlobalLayoutState();
 }
 
-class _RootLayoutState extends State<RootLayout> {
+class _GlobalLayoutState extends State<GlobalLayout> {
   int selectedIndex = 0;
 
   void onTab(int index) {
@@ -32,7 +32,6 @@ class _RootLayoutState extends State<RootLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      backgroundColor: Colors.red,
       body: widget.child,
       bottomNavigationBar: NavBar(
         items: items,
