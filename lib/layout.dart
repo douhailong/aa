@@ -1,4 +1,5 @@
 import 'package:ask/components/nav_bar.dart';
+import 'package:ask/themes/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -32,12 +33,37 @@ class _GlobalLayoutState extends State<GlobalLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      body: widget.child,
+      body: const Center(
+        child: Button(),
+      ),
       bottomNavigationBar: NavBar(
         items: items,
         selectedIndex: selectedIndex,
         onTab: onTab,
       ),
+    );
+  }
+}
+
+class Button extends StatelessWidget {
+  const Button({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {},
+      style: ButtonStyle(
+        shape: WidgetStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(9),
+          ),
+        ),
+        splashFactory: NoSplash.splashFactory,
+        elevation: const WidgetStatePropertyAll(0),
+        backgroundColor: const WidgetStatePropertyAll(Colors2.gray900),
+        foregroundColor: const WidgetStatePropertyAll(Colors2.gray950),
+      ),
+      child: const Text('Button'),
     );
   }
 }
